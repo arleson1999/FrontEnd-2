@@ -1,16 +1,26 @@
-import { Routes } from "react-router-dom";
-import { Home } from "./components/Home";
-import { Cadastro } from "./components/Cadastro";
-import { Consulta } from "./components/Consulta";
+import styles from "./App.module.css";
+import Consulta from "./components/Consulta";
+import Cadastro from "./components/Cadastro";
+import Home from "./components/Home";
+import "./global.css";
+import { Route, Routes } from "react-router-dom";
+import Header from "./components/Header";
+import SideBar from "./components/SideBar";
 
-export default function App() {
+function App() {
   return (
     <div>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/cadastro" element={<Cadastro />} />
-        <Route path="/consulta" element={<Consulta />} />
-      </Routes>
+      <Header />
+      <div className={styles.wrapper}>
+        <SideBar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/consulta" element={<Consulta />} />
+          <Route path="/cadastro" element={<Cadastro />} />
+        </Routes>
+      </div>
     </div>
   );
 }
+
+export default App;

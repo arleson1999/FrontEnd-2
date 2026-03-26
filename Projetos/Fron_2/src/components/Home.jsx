@@ -1,14 +1,18 @@
 import { Link } from "react-router-dom";
-export function Home() {
+import styles from "./Home.module.css";
+
+function Home() {
   return (
     <div>
       <h2>Sistema de Contatos</h2>
-      <p>
-        <link to="/cadastro">Cadastro</link>
-      </p>
-      <p>
-        <link to="/consulta">Consulta</link>
-      </p>
+      <div className={styles.context}>
+        <Link to="/cadastro">Cadastro</Link>
+      </div>
+      <div className={styles.context}>
+        <Link to="/consulta">Consulta</Link>
+      </div>
     </div>
   );
 }
+
+export default Home;

@@ -1,0 +1,14 @@
+.content {
+  background: var(--gray-700);
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  margin-top: 2rem;
+}
+.field {
+  font-size: 0.875rem;
+}
+.field strong {
+  line-height: 1.6;
+  color: var(--green-300);
+}
